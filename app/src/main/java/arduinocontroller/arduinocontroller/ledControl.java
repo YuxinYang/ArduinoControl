@@ -1,29 +1,22 @@
 package arduinocontroller.arduinocontroller;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-
-import android.view.Menu;
-import android.view.MenuItem;
 
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.UUID;
 
 public class ledControl extends AppCompatActivity {
@@ -41,7 +34,7 @@ public class ledControl extends AppCompatActivity {
     String outStream = null;
 
     //SPP UUID. Look for it
-    static final UUID myUUID = UUID.fromString("16178937-b0fa-4cd6-b5a2-83ca123b7133");
+    static final UUID myUUID = UUID.fromString("00001001-0000-1000-8000-00805F9B34FB"); //Standard SerialPortService ID
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,7 +125,7 @@ public class ledControl extends AppCompatActivity {
         if(btSocket != null){
             try{
                 outStream = String.valueOf(x)+"_TO";
-                btSocket.getOutputStream().write(outStream.toString().getBytes());
+                btSocket.getOutputStream().write(outStream.getBytes());
             }catch(IOException io_e){
                 msg("TURN ON " + String.valueOf(x) + " ERROR");
             }
@@ -143,7 +136,7 @@ public class ledControl extends AppCompatActivity {
         if(btSocket != null){
             try{
                 outStream = String.valueOf(x)+"_TF";
-                btSocket.getOutputStream().write(outStream.toString().getBytes());
+                btSocket.getOutputStream().write(outStream.getBytes());
             }catch(IOException io_e){
                 msg("TURN OFF " + String.valueOf(x) + " ERROR");
             }
@@ -155,12 +148,23 @@ public class ledControl extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
     }
 
+    private BluetoothSocket createBluetoothSocket(BluetoothDevice device) throws IOException {
+        try {
+            final Method m = device.getClass().getMethod("createInsecureRfcommSocketToServiceRecord", UUID.class);
+            return (BluetoothSocket) m.invoke(device, myUUID);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e("", "Could not create Insecure RFComm Connection",e);
+        }
+        return  device.createRfcommSocketToServiceRecord(myUUID);
+    }
+
     private class ConnectBT extends AsyncTask<Void, Void, Void>{
         private  boolean ConnectSuccess = true;
 
         @Override
         protected void onPreExecute(){
-            progress = ProgressDialog.show(ledControl.this, "Connecting...", "Please wait!!!");
+            progress = ProgressDialog.show(ledControl.this, "Connecting with " + address + "...", "Please wait!!!");
         }
 
         @Override
@@ -169,19 +173,50 @@ public class ledControl extends AppCompatActivity {
                 if (btSocket == null || !isBtConnected) {
                     myBluetooth = BluetoothAdapter.getDefaultAdapter();//get the mobile bluetooth device
                     BluetoothDevice dispositivo = myBluetooth.getRemoteDevice(address);//connects to the device's address and checks if it's available
-                    btSocket = dispositivo.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
-                    BluetoothAdapter.getDefaultAdapter().cancelDiscovery();
-                    btSocket.connect();//start connection
+
+                    try{
+                        btSocket = createBluetoothSocket(dispositivo);
+                        //btSocket = dispositivo.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
+                    }catch(Exception e){
+                        e.printStackTrace();
+                        Log.e("","Error creating socket");
+                    }
+
+                    myBluetooth.cancelDiscovery();
+                    //myBluetooth.ACTION_DISCOVERY_FINISHED;
+
+                    try{
+                        btSocket.connect();
+                        Log.e("","Connected");
+                    }catch(IOException io_e) {
+                        io_e.printStackTrace();
+                        //Log.e("",io_e.getMessage());
+                        try {
+                            Log.e("", "trying fallback...");
+                            btSocket = (BluetoothSocket) dispositivo.getClass().getMethod("createRfcommSocket", new Class[]{int.class}).invoke(dispositivo, 1);
+                            btSocket.connect();
+                            Log.e("", "Connected");
+                        } catch (Exception e2) {
+                            try {
+                                btSocket.close();
+                            } catch (IOException io_e2) {
+                                Log.e("Fatal Error", "In onResume() and unable to close socket during connection failure" + io_e2.getMessage() + ".");
+                            }
+                            e2.printStackTrace();
+                            Log.e("", "Couldn't establish Bluetooth connection!");
+                            ConnectSuccess = false;
+                        }
+                    }
                 }
-            } catch (IOException io_e) {
+            } catch (Exception e) {
                 ConnectSuccess = false;
-                io_e.printStackTrace();
+                e.printStackTrace();
             }
             return null;
         }
 
         @Override
-        protected void onPostExecute(Void result) { 
+        protected void onPostExecute(Void result) {
             super.onPostExecute(result);
 
             if (!ConnectSuccess) {
