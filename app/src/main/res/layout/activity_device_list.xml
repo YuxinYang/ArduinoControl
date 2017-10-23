@@ -7,34 +7,30 @@
     tools:context="arduinocontroller.arduinocontroller.DeviceList">
 
     <RelativeLayout
-        android:layout_width="0dp"
-        android:layout_height="551dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        android:layout_width="585dp"
+        android:layout_height="810dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="7dp">
+
+        <ToggleButton
+            android:id="@+id/btn_scan"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="ToggleButton"
+            android:textColorLink="@color/colorPrimary"
+            android:textOff="Scan"
+            android:textOn="Scanning"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
 
         <ListView
             android:id="@+id/listView"
-            android:layout_width="357dp"
-            android:layout_height="406dp"
-            app:layout_editor_absoluteY="60dp"
-            tools:layout_editor_absoluteX="14dp"
-            tools:layout_editor_absoluteY="60dp"
-            android:layout_below="@+id/btn_pairedDevices"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <Button
-            android:id="@+id/btn_pairedDevices"
-            android:layout_width="346dp"
-            android:layout_height="56dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:text="PAIRED DEVICES"
-            tools:layout_editor_absoluteX="19dp"
-            tools:layout_editor_absoluteY="1dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btn_scan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp" />
     </RelativeLayout>
-
 </android.support.constraint.ConstraintLayout>

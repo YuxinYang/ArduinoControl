@@ -1,19 +1,19 @@
-The target system is: Android - 16 - armv5te
+The target system is: Android - 18 - armv5te
 The host system is: Darwin - 16.7.0 - x86_64
 Determining if the C compiler works passed with the following output:
 Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_a67d9"
-[1/2] Building C object CMakeFiles/cmTC_a67d9.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_a67d9
+Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_c9d9c"
+[1/2] Building C object CMakeFiles/cmTC_c9d9c.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_c9d9c
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_37c7e"
-[1/2] Building C object CMakeFiles/cmTC_37c7e.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_37c7e
+Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_7e771"
+[1/2] Building C object CMakeFiles/cmTC_7e771.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_7e771
 Android clang version 5.0.300080  (based on LLVM 5.0.300080)
 Target: armv5te-none-linux-android
 Thread model: posix
@@ -25,16 +25,16 @@ Candidate multilib: armv7-a;@armv7
 Candidate multilib: armv7-a/thumb;@armv7@thumb
 Candidate multilib: .;
 Selected multilib: thumb;@thumb
- "/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_37c7e /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib --exclude-libs libgcc.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_37c7e.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtend_android.o
+ "/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_7e771 /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib --exclude-libs libgcc.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_7e771.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtend_android.o
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_37c7e"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_37c7e.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_37c7e]
+  ignore line: [Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_7e771"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_7e771.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_7e771]
   ignore line: [Android clang version 5.0.300080  (based on LLVM 5.0.300080)]
   ignore line: [Target: armv5te-none-linux-android]
   ignore line: [Thread model: posix]
@@ -51,9 +51,9 @@ Parsed C implicit link information from above output:
   ignore line: []
   ignore line: [Selected multilib: thumb]
   ignore line: [@thumb]
-  link line: [ "/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_37c7e /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib --exclude-libs libgcc.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_37c7e.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtend_android.o]
+  link line: [ "/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_7e771 /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib --exclude-libs libgcc.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_7e771.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtend_android.o]
     arg [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld] ==> ignore
-    arg [--sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm] ==> ignore
+    arg [--sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm] ==> ignore
     arg [-pie] ==> ignore
     arg [-X] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
@@ -62,14 +62,14 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_37c7e] ==> ignore
-    arg [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtbegin_dynamic.o] ==> ignore
+    arg [cmTC_7e771] ==> ignore
+    arg [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtbegin_dynamic.o] ==> ignore
     arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm]
     arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb]
     arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb]
-    arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib]
+    arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib]
     arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb]
-    arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib]
+    arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib]
     arg [--exclude-libs] ==> ignore
     arg [libgcc.a] ==> ignore
     arg [--build-id] ==> ignore
@@ -81,23 +81,23 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [--gc-sections] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_37c7e.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_7e771.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [-ldl] ==> lib [dl]
     arg [-lc] ==> lib [c]
     arg [-lgcc] ==> lib [gcc]
     arg [-ldl] ==> lib [dl]
-    arg [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtend_android.o] ==> ignore
+    arg [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtend_android.o] ==> ignore
   remove lib [gcc]
   remove lib [gcc]
   collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm]
   collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb]
   collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/arm-linux-androideabi/lib/thumb]
-  collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib]
+  collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib]
   collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/arm-linux-androideabi/lib/thumb]
-  collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib]
+  collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib]
   implicit libs: [dl;c;dl]
-  implicit dirs: [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm;/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb;/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/arm-linux-androideabi/lib/thumb;/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib]
+  implicit dirs: [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm;/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb;/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/arm-linux-androideabi/lib/thumb;/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib]
   implicit fwks: []
 
 
@@ -106,9 +106,9 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_b4574"
-[1/2] Building C object CMakeFiles/cmTC_b4574.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_b4574
+Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_ef106"
+[1/2] Building C object CMakeFiles/cmTC_ef106.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_ef106
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -120,9 +120,9 @@ Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja"
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_4bb10"
-[1/2] Building C object CMakeFiles/cmTC_4bb10.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_4bb10
+Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_8ae29"
+[1/2] Building C object CMakeFiles/cmTC_8ae29.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_8ae29
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -134,9 +134,9 @@ Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja"
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_111e4"
-[1/2] Building C object CMakeFiles/cmTC_111e4.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_111e4
+Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_7d5a4"
+[1/2] Building C object CMakeFiles/cmTC_7d5a4.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_7d5a4
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -146,17 +146,17 @@ Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja"
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_f6669"
-[1/2] Building CXX object CMakeFiles/cmTC_f6669.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_f6669
+Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_101c5"
+[1/2] Building CXX object CMakeFiles/cmTC_101c5.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_101c5
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_1e132"
-[1/2] Building CXX object CMakeFiles/cmTC_1e132.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_1e132
+Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_97164"
+[1/2] Building CXX object CMakeFiles/cmTC_97164.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_97164
 Android clang version 5.0.300080  (based on LLVM 5.0.300080)
 Target: armv5te-none-linux-android
 Thread model: posix
@@ -168,16 +168,16 @@ Candidate multilib: armv7-a;@armv7
 Candidate multilib: armv7-a/thumb;@armv7@thumb
 Candidate multilib: .;
 Selected multilib: thumb;@thumb
- "/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_1e132 /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib --exclude-libs libgcc.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_1e132.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtend_android.o
+ "/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_97164 /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib --exclude-libs libgcc.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_97164.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtend_android.o
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_1e132"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_1e132.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_1e132]
+  ignore line: [Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_97164"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_97164.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_97164]
   ignore line: [Android clang version 5.0.300080  (based on LLVM 5.0.300080)]
   ignore line: [Target: armv5te-none-linux-android]
   ignore line: [Thread model: posix]
@@ -194,9 +194,9 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [Selected multilib: thumb]
   ignore line: [@thumb]
-  link line: [ "/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_1e132 /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib --exclude-libs libgcc.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_1e132.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtend_android.o]
+  link line: [ "/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_97164 /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib -L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb -L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib --exclude-libs libgcc.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_97164.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtend_android.o]
     arg [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld] ==> ignore
-    arg [--sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm] ==> ignore
+    arg [--sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm] ==> ignore
     arg [-pie] ==> ignore
     arg [-X] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
@@ -205,14 +205,14 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1e132] ==> ignore
-    arg [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtbegin_dynamic.o] ==> ignore
+    arg [cmTC_97164] ==> ignore
+    arg [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtbegin_dynamic.o] ==> ignore
     arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm]
     arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb]
     arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb]
-    arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib]
+    arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib]
     arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb]
-    arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib]
+    arg [-L/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib] ==> dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib]
     arg [--exclude-libs] ==> ignore
     arg [libgcc.a] ==> ignore
     arg [--build-id] ==> ignore
@@ -224,7 +224,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [--gc-sections] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_1e132.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_97164.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc] ==> lib [gcc]
@@ -234,7 +234,7 @@ Parsed CXX implicit link information from above output:
     arg [-lgcc] ==> lib [gcc]
     arg [-lgcc] ==> lib [gcc]
     arg [-ldl] ==> lib [dl]
-    arg [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib/crtend_android.o] ==> ignore
+    arg [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib/crtend_android.o] ==> ignore
   remove lib [gcc]
   remove lib [gcc]
   remove lib [gcc]
@@ -242,11 +242,11 @@ Parsed CXX implicit link information from above output:
   collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm]
   collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb]
   collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/thumb] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/arm-linux-androideabi/lib/thumb]
-  collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib/../lib] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib]
+  collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib/../lib] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib]
   collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/thumb] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/arm-linux-androideabi/lib/thumb]
-  collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib]
+  collapse library dir [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib] ==> [/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib]
   implicit libs: [stdc++;m;dl;c;dl]
-  implicit dirs: [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm;/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb;/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/arm-linux-androideabi/lib/thumb;/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm/usr/lib]
+  implicit dirs: [/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/5.0.300080/lib/linux/arm;/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb;/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/arm-linux-androideabi/lib/thumb;/Users/yuxin/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-arm/usr/lib]
   implicit fwks: []
 
 
@@ -255,9 +255,9 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_03583"
-[1/2] Building CXX object CMakeFiles/cmTC_03583.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_03583
+Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_6ffe6"
+[1/2] Building CXX object CMakeFiles/cmTC_6ffe6.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_6ffe6
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -322,9 +322,9 @@ Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja"
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_86766"
-[1/2] Building CXX object CMakeFiles/cmTC_86766.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_86766
+Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_7c586"
+[1/2] Building CXX object CMakeFiles/cmTC_7c586.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_7c586
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -389,9 +389,9 @@ Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja"
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_6094f"
-[1/2] Building CXX object CMakeFiles/cmTC_6094f.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_6094f
+Run Build Command:"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_7ec4b"
+[1/2] Building CXX object CMakeFiles/cmTC_7ec4b.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_7ec4b
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

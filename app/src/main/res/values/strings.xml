@@ -1,4 +1,3 @@
 <resources>
     <string name="app_name">ArduinoController</string>
-    <string name="title_activity_led_control">ledControl</string>
 </resources>
