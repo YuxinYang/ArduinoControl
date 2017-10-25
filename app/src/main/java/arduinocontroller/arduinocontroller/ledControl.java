@@ -18,7 +18,9 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.UUID;
+
 
 public class ledControl extends AppCompatActivity {
 
@@ -26,14 +28,15 @@ public class ledControl extends AppCompatActivity {
     Button btn_dis;
     TextView txt_view;
     String address = null;
-    //private ProgressDialog progress;
+    private ProgressDialog progress;
     BluetoothAdapter myBluetooth = null;
     BluetoothSocket btSocket = null;
+    BluetoothDevice dispositivo = null;
     private boolean isBtConnected = false;
     ConnectThread connectThread = null;
     //SPP UUID. Look for it
-    //static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-
+    static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    InputStream inputStream;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +57,9 @@ public class ledControl extends AppCompatActivity {
         txt_view = (TextView)findViewById(R.id.txt_view);
 
         //Call the class to connect
-        //new ConnectBT().execute();
+        new ConnectBT().execute();
 
+        /*
         if (btSocket == null || !isBtConnected) {
             myBluetooth = BluetoothAdapter.getDefaultAdapter();//get the mobile bluetooth device
             BluetoothDevice dispositivo = myBluetooth.getRemoteDevice(address);//connects to the device's address and checks if it's available
@@ -63,7 +67,16 @@ public class ledControl extends AppCompatActivity {
         }else{
             finish();
         }
-        connectThread.run();
+        connectThread.run();*/
+        if(btSocket != null){
+            try {
+                inputStream = btSocket.getInputStream();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            txt_view.setText(inputStream.toString());
+        }
+
 
 
         //commands to be sent to bluetooth
@@ -82,9 +95,9 @@ public class ledControl extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
                 IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
                 if (isChecked) {
-                    turnOnLed(5);      //method to turn on
+                    turnOnLed(2);      //method to turn on
                 } else {
-                    turnOnLed(5);      //method to turn on
+                    turnOnLed(2);      //method to turn on
                 }
             }
         });
@@ -93,9 +106,9 @@ public class ledControl extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
                 IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
                 if (isChecked) {
-                    turnOnLed(6);      //method to turn on
+                    turnOnLed(3);      //method to turn on
                 } else {
-                    turnOnLed(6);      //method to turn on
+                    turnOnLed(3);      //method to turn on
                 }
             }
         });
@@ -112,12 +125,11 @@ public class ledControl extends AppCompatActivity {
     {
         if (btSocket!=null) //If the btSocket is busy
         {
-            try
-            {
+            try {
                 btSocket.close(); //close connection
+            } catch (IOException e) {
+                msg("Error");
             }
-            catch (IOException e)
-            { msg("Error");}
         }
         finish(); //return to the first layout
 
@@ -127,13 +139,10 @@ public class ledControl extends AppCompatActivity {
     {
         if (btSocket!=null)
         {
-            String outStream = String.valueOf(n) + "_TF";
-            try
-            {
+            String outStream = String.valueOf(n) + "_OFF";
+            try {
                 btSocket.getOutputStream().write(outStream.getBytes());
-            }
-            catch (IOException e)
-            {
+            } catch (IOException e) {
                 msg("Error");
             }
         }
@@ -141,27 +150,22 @@ public class ledControl extends AppCompatActivity {
 
     private void turnOnLed(int n)
     {
-        if (btSocket!=null)
-        {
-            String outStream = String.valueOf(n) + "_TO";
-            try
-            {
+        if (btSocket!=null) {
+            String outStream = String.valueOf(n) + "_ON";
+            try {
                 btSocket.getOutputStream().write(outStream.getBytes());
-            }
-            catch (IOException e)
-            {
+            } catch (IOException e) {
                 msg("Error");
             }
         }
     }
 
     // fast way to call Toast
-    private void msg(String s)
-    {
+    private void msg(String s) {
         Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
     }
 
-    /*
+
     private class ConnectBT extends AsyncTask<Void, Void, Void> {
         private  boolean ConnectSuccess = true;
 
@@ -175,39 +179,46 @@ public class ledControl extends AppCompatActivity {
             try {
                 if (btSocket == null || !isBtConnected) {
                     myBluetooth = BluetoothAdapter.getDefaultAdapter();//get the mobile bluetooth device
-                    BluetoothDevice dispositivo = myBluetooth.getRemoteDevice(address);//connects to the device's address and checks if it's available
+                    dispositivo = myBluetooth.getRemoteDevice(address);//connects to the device's address and checks if it's available
+                    if(dispositivo == null){
+                        //msg("Device not found.  Unable to connect.");
+                        finish();
+                    }
+                    Log.i("Device",dispositivo.getAddress());
 
                     try{
                         //btSocket = createBluetoothSocket(dispositivo);
-                        btSocket = dispositivo.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
+                        btSocket = dispositivo.createRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
                     }catch(Exception e){
                         e.printStackTrace();
-                        Log.e("","Error creating socket");
+                        Log.e("Error","creating socket");
                     }
 
-                    myBluetooth.cancelDiscovery();
-                    //myBluetooth.ACTION_DISCOVERY_FINISHED;
-
-                    try{
-                        btSocket.connect();
-                        Log.e("","Connected");
-                    }catch(IOException io_e) {
-                        io_e.printStackTrace();
-                        //Log.e("",io_e.getMessage());
+                    if(myBluetooth.cancelDiscovery()) {
+                        //myBluetooth.ACTION_DISCOVERY_FINISHED;
+                        Log.i("ACTION", myBluetooth.ACTION_DISCOVERY_FINISHED);
                         try {
-                            Log.e("", "trying fallback...");
-                            btSocket = (BluetoothSocket) dispositivo.getClass().getMethod("createRfcommSocket", new Class[]{int.class}).invoke(dispositivo, 1);
                             btSocket.connect();
-                            Log.e("", "Connected");
-                        } catch (Exception e2) {
+                            Log.e("Action", "Connected");
+                        } catch (IOException io_e) {
+                            io_e.printStackTrace();
+                            //Log.e("",io_e.getMessage());
                             try {
-                                btSocket.close();
-                            } catch (IOException io_e2) {
-                                Log.e("Fatal Error", "In onResume() and unable to close socket during connection failure" + io_e2.getMessage() + ".");
+                                Log.e("Connect ERROR", "trying fallback...");
+                                btSocket = (BluetoothSocket) dispositivo.getClass().getMethod("createInsecureRfcommSocket", new Class[]{int.class}).invoke(dispositivo, 2);
+                                btSocket.connect();
+                                Log.e("Action", "Connected");
+                            } catch (Exception e2) {
+                                e2.printStackTrace();
+                                Log.e("", "Couldn't establish Bluetooth connection!");
+                                Log.e("Connect ERROR", "stop...");
+                                try {
+                                    btSocket.close();
+                                } catch (IOException io_e2) {
+                                    Log.e("Fatal Error", "In onResume() and unable to close socket during connection failure" + io_e2.getMessage() + ".");
+                                }
+                                ConnectSuccess = false;
                             }
-                            e2.printStackTrace();
-                            Log.e("", "Couldn't establish Bluetooth connection!");
-                            ConnectSuccess = false;
                         }
                     }
                 }
@@ -232,5 +243,4 @@ public class ledControl extends AppCompatActivity {
             progress.dismiss();
         }
     }
-    */
 }

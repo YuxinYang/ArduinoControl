@@ -48,15 +48,13 @@ public class ConnectThread extends Thread {
             if (!mBTSocket.isConnected()) {
                 mBTSocket.connect();
             }
-
         } catch (IOException ex) {
             ex.printStackTrace();
             Message message = new Message();
             message.what = 0x222;
             try{
-                //使用反射进行连接
                 try {
-                    mBTSocket =(BluetoothSocket) mBTDevice.getClass().getMethod("createRfcommSocket", new Class[] {int.class}).invoke(mBTDevice,2);
+                    mBTSocket =(BluetoothSocket) mBTDevice.getClass().getMethod("createRfcommSocket", new Class[] {int.class}).invoke(mBTDevice,1);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 } catch (InvocationTargetException e) {
@@ -71,16 +69,13 @@ public class ConnectThread extends Thread {
                 } catch (IOException ex1) {
                     ex1.printStackTrace();
                 }
-
             }
-
             ex.printStackTrace();
         }
-        //连接成功发送message
+
         Message message = new Message();
         message.what = 0x111;
         message.obj = mBTDevice;
-
         Log.e("eee","run() stop...");
     }
 
@@ -89,7 +84,7 @@ public class ConnectThread extends Thread {
         try{
             mBTSocket.close();
         }catch (IOException ex){
-            //...
+
         }
     }
 }

@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="arduinocontroller.arduinocontroller.DeviceList">
+    tools:context="arduinocontroller.arduinocontroller.DeviceList"
+    android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="585dp"
-        android:layout_height="810dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="7dp">
 
-        <ToggleButton
-            android:id="@+id/btn_scan"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:text="ToggleButton"
-            android:textColorLink="@color/colorPrimary"
-            android:textOff="Scan"
-            android:textOn="Scanning"
-            android:textStyle="bold"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+    <ToggleButton
+        android:id="@+id/btn_scan"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="ToggleButton"
+        android:textColorLink="@color/colorPrimary"
+        android:textOff="Scan"
+        android:textOn="Scanning"
+        android:textStyle="bold" />
 
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/btn_scan"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="18dp" />
-    </RelativeLayout>
-</android.support.constraint.ConstraintLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_scan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
+
+</LinearLayout>
