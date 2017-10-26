@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -43,8 +44,6 @@ public class DeviceList extends AppCompatActivity {
         System.loadLibrary("native-lib");
     }
 
-    private boolean isLocationCoarsePermissionGranted = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,11 +54,12 @@ public class DeviceList extends AppCompatActivity {
         initBluetoothPermission();
         getPairedDevices();
         checkLocationPermission();
+        initBEReceiver();
     }
 
     public void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(bReciever);
+        unregisterReceiver(bReceiver);
         Log.i(TAG, "Unregister...");
     }
 
@@ -70,7 +70,6 @@ public class DeviceList extends AppCompatActivity {
             case REQUEST_COARSE_LOCATION: {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    isLocationCoarsePermissionGranted = true;
                 } else {
                     // for now just request again
                     checkLocationPermission();
@@ -90,11 +89,9 @@ public class DeviceList extends AppCompatActivity {
                 if (isChecked) {
                     adapter.clear();
                     // start discovering devices only if location coarse permission get granted
-                    if (isLocationCoarsePermissionGranted) {
-                        myBluetooth.startDiscovery();
-                    }
+                    myBluetooth.startDiscovery();
                 } else {
-                    //getActivity().unregisterReceiver(bReciever);
+                    //getActivity().unregisterReceiver(bReceiver);
                     myBluetooth.cancelDiscovery();
                 }
             }
@@ -119,7 +116,14 @@ public class DeviceList extends AppCompatActivity {
         pairedDevicesList(devices);
     }
 
+    private void initBEReceiver() {
+        IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
+        filter.addAction(BluetoothDevice.ACTION_NAME_CHANGED);
+        registerReceiver(bReceiver, filter);
+    }
+
     private void checkLocationPermission() {
+        // Do something for lollipop and above versions
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
 
@@ -130,7 +134,7 @@ public class DeviceList extends AppCompatActivity {
     }
 
 
-    private final BroadcastReceiver bReciever = new BroadcastReceiver() {
+    private final BroadcastReceiver bReceiver = new BroadcastReceiver() {
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
             if (BluetoothDevice.ACTION_FOUND.equals(action)) {
@@ -138,7 +142,6 @@ public class DeviceList extends AppCompatActivity {
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 String deviceItem = device.getName() + "\n" + device.getAddress();
                 Log.e("", String.valueOf(adapter.getPosition(deviceItem)));
-                //show Bluetoothdevices unique
                 if (!(adapter.getPosition(deviceItem) > -1)) {
                     adapter.add(deviceItem);
                 }
