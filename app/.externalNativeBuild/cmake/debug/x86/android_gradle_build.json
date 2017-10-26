@@ -1,12 +1,9 @@
 
 {
-	"buildFiles" : 
-	[
-		"/Users/yuxin/Documents/StudioProject/ArduinoController/app/CMakeLists.txt"
-	],
+	"buildFiles" : [ "/Users/cai/WORK/ArduinoControl/app/CMakeLists.txt" ],
 	"cleanCommands" : 
 	[
-		"/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/x86 --target clean"
+		"/Users/cai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/cai/WORK/ArduinoControl/app/.externalNativeBuild/cmake/debug/x86 --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
@@ -15,27 +12,27 @@
 		{
 			"abi" : "x86",
 			"artifactName" : "native-lib",
-			"buildCommand" : "/Users/yuxin/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/x86 --target native-lib",
+			"buildCommand" : "/Users/cai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/cai/WORK/ArduinoControl/app/.externalNativeBuild/cmake/debug/x86 --target native-lib",
 			"buildType" : "debug",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/yuxin/Library/Android/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem /Users/yuxin/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/yuxin/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem /Users/yuxin/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /Users/yuxin/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
-					"src" : "/Users/yuxin/Documents/StudioProject/ArduinoController/app/src/main/cpp/native-lib.cpp",
-					"workingDirectory" : "/Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/debug/x86"
+					"flags" : "  -target i686-none-linux-android -gcc-toolchain /Users/cai/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/cai/Library/Android/sdk/ndk-bundle/platforms/android-18/arch-x86  -Dnative_lib_EXPORTS -isystem /Users/cai/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/cai/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem /Users/cai/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti  -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/cai/WORK/ArduinoControl/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/Users/cai/WORK/ArduinoControl/app/.externalNativeBuild/cmake/debug/x86"
 				}
 			],
-			"output" : "/Users/yuxin/Documents/StudioProject/ArduinoController/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so",
-			"toolchain" : "10473008597746254674"
+			"output" : "/Users/cai/WORK/ArduinoControl/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so",
+			"toolchain" : "1836882080235339073"
 		}
 	},
 	"toolchains" : 
 	{
-		"10473008597746254674" : 
+		"1836882080235339073" : 
 		{
-			"cCompilerExecutable" : "/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
-			"cppCompilerExecutable" : "/Users/yuxin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+			"cCompilerExecutable" : "/Users/cai/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/cai/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
 		}
 	}
 }

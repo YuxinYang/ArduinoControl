@@ -1,10 +1,14 @@
 package arduinocontroller.arduinocontroller;
 
+import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,6 +27,7 @@ import java.util.Set;
 
 public class DeviceList extends AppCompatActivity {
 
+    private static final int REQUEST_COARSE_LOCATION = 123456;
     //widgets
     ToggleButton btnScan;
     ListView devicelist;
@@ -63,9 +68,10 @@ public class DeviceList extends AppCompatActivity {
         pairedDevicesList(devices);
 
         IntentFilter filter=new IntentFilter(BluetoothDevice.ACTION_FOUND);
+        filter.addAction(BluetoothDevice.ACTION_NAME_CHANGED);
         registerReceiver(bReciever,filter);
-        IntentFilter filter2=new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
-        registerReceiver(bReciever,filter2);
+
+        checkLocationPermission();
 
         btnScan.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -84,6 +90,33 @@ public class DeviceList extends AppCompatActivity {
         super.onDestroy();
         unregisterReceiver(bReciever);
         Log.e("destory","Unregister...");
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_COARSE_LOCATION: {
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                } else {
+                    //TODO re-request
+                    checkLocationPermission();
+                }
+                break;
+            }
+        }
+    }
+
+    protected void checkLocationPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                    REQUEST_COARSE_LOCATION);
+        }
     }
 
     private final BroadcastReceiver bReciever = new BroadcastReceiver() {

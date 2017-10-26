@@ -1,3 +1,3 @@
-/Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/edit_cache.dir
-/Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/rebuild_cache.dir
-/Users/yuxin/Documents/StudioProject/ArduinoController/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/native-lib.dir
+/Users/cai/WORK/ArduinoControl/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/edit_cache.dir
+/Users/cai/WORK/ArduinoControl/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/rebuild_cache.dir
+/Users/cai/WORK/ArduinoControl/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/native-lib.dir
